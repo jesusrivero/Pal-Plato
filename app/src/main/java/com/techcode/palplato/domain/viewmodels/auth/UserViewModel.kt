@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.techcode.palplato.data.repository.local.SessionManager
-import com.techcode.palplato.domain.model.GetUserProfileUseCase
+import com.techcode.palplato.domain.usecase.auth.updateprofiledates.GetUserProfileUseCase
 import com.techcode.palplato.domain.model.UserProfileUpdate
 import com.techcode.palplato.domain.usecase.auth.updateprofiledates.ReauthenticateUserUseCase
 import com.techcode.palplato.domain.usecase.auth.updateprofiledates.UpdateUserEmailUseCase

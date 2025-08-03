@@ -47,19 +47,6 @@ class BusinessViewModel @Inject constructor(
 	}
 
 	
-//	fun createBusiness(business: Business) {
-//		viewModelScope.launch {
-//			_businessState.value = Resource.Loading()
-//			val result = createBusinessUseCase(business)
-//			if (result is Resource.Success) {
-//				sessionManager.saveBusinessId(result.result)
-//				_businessState.value = Resource.Success(Unit)
-//			} else if (result is Resource.Error) {
-//				_businessState.value = Resource.Error(result.message)
-//			}
-//		}
-//	}
-	
 	fun updateBusiness(updates: Map<String, Any>) {
 		viewModelScope.launch {
 			_businessState.value = Resource.Loading()
@@ -72,6 +59,7 @@ class BusinessViewModel @Inject constructor(
 			}
 		}
 	}
+	
 	
 	fun getBusinessData() {
 		viewModelScope.launch {

@@ -40,15 +40,7 @@ class BusinessRepositoryImpl @Inject constructor(
 		return docRef.id // ✅ Retornar businessId
 	}
 
-	
-//	override suspend fun createBusiness(business: Business): String {
-//		val docRef = firestore.collection("businesses").document()
-//		val newBusiness = business.copy(businessId = docRef.id)
-//		docRef.set(newBusiness).await()
-//		return docRef.id // ✅ Retornamos el businessId
-//	}
-	
-	
+
 	override suspend fun getBusinessById(businessId: String): Business? {
 		val snapshot = firestore.collection("businesses")
 			.document(businessId)
@@ -73,7 +65,6 @@ class BusinessRepositoryImpl @Inject constructor(
 				day = scheduleMap["day"] as? String ?: "",
 				openTime = scheduleMap["openTime"] as? String,
 				closeTime = scheduleMap["closeTime"] as? String,
-				isOpen = scheduleMap["isOpen"] as? Boolean ?: false // 👈 Se lee directamente de Firestore
 			)
 		} ?: emptyList()
 		
@@ -84,16 +75,6 @@ class BusinessRepositoryImpl @Inject constructor(
 		)
 	}
 
-
-
-
-//	override suspend fun getBusinessById(businessId: String): Business? {
-//		val snapshot = firestore.collection("businesses")
-//			.document(businessId)
-//			.get()
-//			.await()
-//		return snapshot.toObject(Business::class.java)?.copy(businessId = snapshot.id)
-//	}
 	
 	
 	override suspend fun updateBusinessFields(

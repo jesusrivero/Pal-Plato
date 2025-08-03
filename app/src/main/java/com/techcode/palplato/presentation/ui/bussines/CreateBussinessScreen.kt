@@ -684,7 +684,6 @@ fun CreateBussinessContent(navController: NavController) {
 									day = day,
 									openTime = openingHours[day]?.format(formatter),
 									closeTime = closingHours[day]?.format(formatter),
-									isOpen = openingHours[day] != null && closingHours[day] != null
 								)
 							}
 							

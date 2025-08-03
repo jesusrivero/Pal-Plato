@@ -1,5 +1,6 @@
-package com.techcode.palplato.domain.model
+package com.techcode.palplato.domain.usecase.auth.updateprofiledates
 
+import com.techcode.palplato.domain.model.UserProfileUpdate
 import com.techcode.palplato.domain.repository.UserRepository
 import javax.inject.Inject
 
